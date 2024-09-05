@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 10:11:05.357403",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_main",
+  "number",
+  "business_item",
+  "business_item_name",
+  "contract_quantity",
+  "rate",
+  "amount",
+  "poc",
+  "allowance_percentage",
+  "max_allowed_qty",
+  "max_allowed_amount",
+  "column_break_jwaw",
+  "description",
+  "uom",
+  "parent_business_item",
+  "completed_quantity",
+  "remaining__quantity",
+  "completed_amount",
+  "section_break_drqa",
+  "project",
+  "column_break_ldhp",
+  "cost_center",
+  "related_business_item"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_main",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Main "
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number"
+  },
+  {
+   "fieldname": "contract_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Contract Quantity",
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fetch_from": "business_item.uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "poc",
+   "fieldtype": "Percent",
+   "label": "POC",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "allowance_percentage",
+   "fieldtype": "Percent",
+   "label": "Allowance Percentage"
+  },
+  {
+   "fieldname": "column_break_jwaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Item",
+   "options": "Subcontractor Business Item"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "completed_quantity",
+   "fieldtype": "Float",
+   "label": "Completed Quantity",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "remaining__quantity",
+   "fieldtype": "Float",
+   "label": "Remaining  Quantity ",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "completed_amount",
+   "fieldtype": "Currency",
+   "label": "Completed Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "max_allowed_qty",
+   "fieldtype": "Float",
+   "label": "Max Allowed Qty",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "max_allowed_amount",
+   "fieldtype": "Currency",
+   "label": "Max Allowed Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "parent_business_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parent Business Item",
+   "options": "Subcontractor Business Item",
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "section_break_drqa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ldhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "business_item.business_item_name",
+   "fieldname": "business_item_name",
+   "fieldtype": "Data",
+   "label": "Business Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "related_business_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Related Business Item",
+   "options": "Business Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-01 23:20:01.182062",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Subcontractor Contract Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

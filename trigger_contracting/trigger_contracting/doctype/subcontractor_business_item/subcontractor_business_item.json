@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "S-BI-.######",
+ "creation": "2024-05-06 12:16:27.541689",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_gkhw",
+  "business_item_name",
+  "project",
+  "column_break_gnjn",
+  "cost_center",
+  "uom",
+  "section_break_cskn",
+  "description",
+  "business_item_accounts",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_gkhw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "business_item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Business Item Name"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_gnjn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "section_break_cskn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description "
+  },
+  {
+   "fieldname": "business_item_accounts",
+   "fieldtype": "Table",
+   "label": "Business Item Accounts",
+   "options": "Business Item Accounts"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Business Item",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-31 18:17:07.646751",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Subcontractor Business Item",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "business_item_name,cost_center",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

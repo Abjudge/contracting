@@ -1,0 +1,310 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CCV-.#####",
+ "creation": "2024-06-07 15:36:20.877754",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hjlc",
+  "company",
+  "customer",
+  "customer_name",
+  "tax_id",
+  "address",
+  "address_details",
+  "column_break_xnoj",
+  "transaction_date",
+  "valid_till",
+  "contract_end_date",
+  "customer_quotation",
+  "customer_contract",
+  "accounting_dimension_section",
+  "project",
+  "column_break_obnx",
+  "cost_center",
+  "section_break_qvze",
+  "items",
+  "sub_total",
+  "main_item_summary_section",
+  "main_item_summary",
+  "percentages_section",
+  "advance_payment_percentage",
+  "first_retention_percentage",
+  "final_retention_percentage",
+  "value_added_tax_percentage",
+  "tax_deduction_and_addition_percentage",
+  "column_break_wpoq",
+  "advance_payment_amount",
+  "first_retention_amount",
+  "final_retention_amount",
+  "value_added_tax_amount",
+  "tax_deduction_and_addition_amount",
+  "amended_from",
+  "terms_and_condition_section",
+  "terms_and_condition",
+  "terms_and_condition_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hjlc",
+   "fieldtype": "Section Break",
+   "label": "Main Section"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer ",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.tax_id",
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "Tax ID"
+  },
+  {
+   "fetch_from": "customer_quotation.address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_quotation.address_details",
+   "fieldname": "address_details",
+   "fieldtype": "Text",
+   "label": "Address Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xnoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction date"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date "
+  },
+  {
+   "fieldname": "customer_quotation",
+   "fieldtype": "Link",
+   "label": "Customer Quotation",
+   "options": "Customer Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimension "
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_obnx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_qvze",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Customer Contract Versions Item"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_item_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Main Item Summary"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "main_item_summary",
+   "fieldtype": "Table",
+   "label": "Main Item Summary",
+   "options": "Customer Contract Versions Main Item Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "percentages_section",
+   "fieldtype": "Section Break",
+   "label": "Percentages "
+  },
+  {
+   "fieldname": "advance_payment_percentage",
+   "fieldtype": "Percent",
+   "label": "Advance Payment Percentage"
+  },
+  {
+   "fieldname": "first_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "First Retention Percentage"
+  },
+  {
+   "fieldname": "final_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "Final Retention Percentage"
+  },
+  {
+   "fieldname": "value_added_tax_percentage",
+   "fieldtype": "Percent",
+   "label": "Value Added Tax Percentage"
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_percentage",
+   "fieldtype": "Percent",
+   "label": "Tax Deduction and Addition Percentage"
+  },
+  {
+   "fieldname": "column_break_wpoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "advance_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Payment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_retention_amount",
+   "fieldtype": "Currency",
+   "label": "First Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_retention_amount",
+   "fieldtype": "Currency",
+   "label": "Final Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "value_added_tax_amount",
+   "fieldtype": "Currency",
+   "label": "Value Added Tax Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Deduction and Addition Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Contract",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "terms_and_condition_section",
+   "fieldtype": "Section Break",
+   "label": "Terms and Condition"
+  },
+  {
+   "fieldname": "terms_and_condition",
+   "fieldtype": "Link",
+   "label": "Terms And Condition",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "terms_and_condition.terms",
+   "fieldname": "terms_and_condition_details",
+   "fieldtype": "Text",
+   "label": "Terms And Condition Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Contract",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer_contract",
+   "fieldtype": "Link",
+   "label": "Customer Contract",
+   "options": "Customer Contract"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-07 22:15:11.415905",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Customer Contract Versions",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-24 01:35:38.640188",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_main",
+  "number",
+  "project",
+  "contract_qty",
+  "contract_rate",
+  "contract_amount",
+  "column_break_utmc",
+  "business_item",
+  "business_item_name",
+  "description",
+  "cost_center",
+  "remining_qty",
+  "remining_amount",
+  "customer_contract_item_row",
+  "selling_price",
+  "previous_clearance_section",
+  "previous_qty",
+  "previous_amount",
+  "column_break_clar",
+  "previouse_percentage",
+  "current_clearance_section",
+  "rate",
+  "current_qty",
+  "current_amount",
+  "column_break_hzaw",
+  "current_percentage",
+  "current_saved_qty",
+  "total_clearance_section",
+  "total_qty",
+  "total_amount",
+  "column_break_bebj",
+  "total_percentage"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_main",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Main "
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number"
+  },
+  {
+   "fieldname": "business_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Item",
+   "options": "Business Item"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "contract_qty",
+   "fieldtype": "Float",
+   "label": "Contract QTY",
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "remining_qty",
+   "fieldtype": "Float",
+   "label": "Remining Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_utmc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_clearance_section",
+   "fieldtype": "Section Break",
+   "label": "Previous Clearance"
+  },
+  {
+   "fieldname": "previous_qty",
+   "fieldtype": "Float",
+   "label": "Previous QTY",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_amount",
+   "fieldtype": "Currency",
+   "label": "Previous Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_clar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previouse_percentage",
+   "fieldtype": "Percent",
+   "label": "Previouse Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_clearance_section",
+   "fieldtype": "Section Break",
+   "label": "Current Clearance"
+  },
+  {
+   "fieldname": "current_qty",
+   "fieldtype": "Float",
+   "label": "Current QTY",
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total QTY",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hzaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_percentage",
+   "fieldtype": "Percent",
+   "label": "Current Percentage",
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "current_amount",
+   "fieldtype": "Currency",
+   "label": "Current Amount",
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "total_clearance_section",
+   "fieldtype": "Section Break",
+   "label": "Total Clearance"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bebj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_percentage",
+   "fieldtype": "Percent",
+   "label": "Total Percentage ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_rate",
+   "fieldtype": "Currency",
+   "label": "Contract Rate",
+   "read_only": 1,
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "contract_amount",
+   "fieldtype": "Currency",
+   "label": "Contract Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remining_amount",
+   "fieldtype": "Currency",
+   "label": "Remining Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_contract_item_row",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "refrence row",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_item.business_item_name",
+   "fieldname": "business_item_name",
+   "fieldtype": "Data",
+   "label": "Business Item Name",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "current_saved_qty",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Current Saved Qty",
+   "read_only": 1,
+   "read_only_depends_on": "eval:doc.is_main==1"
+  },
+  {
+   "fieldname": "selling_price",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Selling Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-01 14:18:44.437454",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Clearence Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

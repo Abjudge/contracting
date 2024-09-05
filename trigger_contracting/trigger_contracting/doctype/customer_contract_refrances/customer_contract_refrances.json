@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-06 18:39:11.949243",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "internal_customer_clearance",
+  "submitted_invoice",
+  "create_submitted_invoice",
+  "customer_clearence",
+  "create_customer_clearence"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "customer_clearence",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Approved Invoice",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "create_customer_clearence",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Create Approved Invoice"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "internal_customer_clearance",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Virtual Invoice",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "submitted_invoice",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Submitted Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "create_submitted_invoice",
+   "fieldtype": "Button",
+   "label": "Create Submitted Invoice"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-26 13:12:18.482962",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Customer Contract Refrances",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

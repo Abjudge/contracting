@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-06 18:38:15.511707",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "addition_name",
+  "description",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "addition_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Addition Name",
+   "options": "Addition Item"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-06 18:38:15.511707",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Internal Clearence Addition Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

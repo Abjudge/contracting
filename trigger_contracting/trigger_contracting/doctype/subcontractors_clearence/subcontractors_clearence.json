@@ -1,0 +1,369 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "S-Clearence-.#####",
+ "creation": "2024-04-29 10:22:15.786261",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hjlc",
+  "company",
+  "contractor",
+  "contractor_name",
+  "tax_id",
+  "address",
+  "address_details",
+  "column_break_xnoj",
+  "transaction_date",
+  "valid_till",
+  "contract_end_date",
+  "type",
+  "clearance_number",
+  "subcontractor_contract",
+  "journal_created",
+  "accounting_dimension_section",
+  "project",
+  "column_break_kmqe",
+  "cost_center",
+  "business_item",
+  "section_break_vzmy",
+  "items",
+  "sub_total",
+  "main_item_summary_section",
+  "main_item_summary",
+  "deductions_section",
+  "deductions",
+  "total_deduction",
+  "additions_section",
+  "additions",
+  "total_addition",
+  "section_break_nedu",
+  "advance_payment_percentage",
+  "first_retention_percentage",
+  "final_retention_percentage",
+  "value_added_tax_percentage",
+  "tax_deduction_and_addition_percentage",
+  "column_break_tdsz",
+  "advance_payment_amount",
+  "first_retention_amount",
+  "final_retention_amount",
+  "value_added_tax_amount",
+  "tax_deduction_and_addition_amount",
+  "section_break_kcrj",
+  "grand_total",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hjlc",
+   "fieldtype": "Section Break",
+   "label": "Main Section"
+  },
+  {
+   "fetch_from": "subcontractor_contract.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "subcontractor_contract.tax_id",
+   "fieldname": "tax_id",
+   "fieldtype": "Int",
+   "label": "Tax ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contractor.supplier_primary_address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contractor.primary_address",
+   "fieldname": "address_details",
+   "fieldtype": "Text",
+   "label": "Address Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xnoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fetch_from": "subcontractor_contract.valid_till",
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "subcontractor_contract.contract_end_date",
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nCurrent\nFinal"
+  },
+  {
+   "fieldname": "clearance_number",
+   "fieldtype": "Int",
+   "label": "Clearance Number"
+  },
+  {
+   "fieldname": "accounting_dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimension "
+  },
+  {
+   "fetch_from": "subcontractor_contract.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kmqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "subcontractor_contract.cost_center",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vzmy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "S-Clearence Item"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_item_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Main Item Summary"
+  },
+  {
+   "fieldname": "main_item_summary",
+   "fieldtype": "Table",
+   "label": "Main Item Summary",
+   "options": "S-Clearence Main Item Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deductions_section",
+   "fieldtype": "Section Break",
+   "label": "Deductions"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "S-Clearence Deduction Table"
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Deduction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "additions_section",
+   "fieldtype": "Section Break",
+   "label": "Additions"
+  },
+  {
+   "fieldname": "additions",
+   "fieldtype": "Table",
+   "label": "Additions",
+   "options": "S-Clearence Addition Table"
+  },
+  {
+   "fieldname": "total_addition",
+   "fieldtype": "Currency",
+   "label": "Total Addition",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nedu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "advance_payment_percentage",
+   "fieldtype": "Percent",
+   "label": "Advance Payment Percentage"
+  },
+  {
+   "fieldname": "first_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "First Retention Percentage"
+  },
+  {
+   "fieldname": "final_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "Final Retention Percentage"
+  },
+  {
+   "fieldname": "value_added_tax_percentage",
+   "fieldtype": "Percent",
+   "label": "Value Added Tax Percentage"
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_percentage",
+   "fieldtype": "Percent",
+   "label": "Tax Deduction and Addition Percentage"
+  },
+  {
+   "fieldname": "column_break_tdsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "advance_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Payment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_retention_amount",
+   "fieldtype": "Currency",
+   "label": "First Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_retention_amount",
+   "fieldtype": "Currency",
+   "label": "Final Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "value_added_tax_amount",
+   "fieldtype": "Currency",
+   "label": "Value Added Tax Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Deduction and Addition Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kcrj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subcontractor_contract",
+   "fieldtype": "Link",
+   "label": "Subcontractor Contract",
+   "options": "Subcontractor Contract",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "subcontractor_contract.contractor",
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor ",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contractor.supplier_name",
+   "fieldname": "contractor_name",
+   "fieldtype": "Data",
+   "label": "Contractor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subcontractors Clearence",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "journal_created",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Journal Created",
+   "read_only": 1
+  },
+  {
+   "fieldname": "business_item",
+   "fieldtype": "Link",
+   "label": "Business Item",
+   "options": "Business Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Create",
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "custom_subcontractors_clearence"
+  }
+ ],
+ "modified": "2024-09-01 22:34:06.129956",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Subcontractors Clearence",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

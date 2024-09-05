@@ -1,0 +1,359 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "I-Clearence-.#####",
+ "creation": "2024-06-06 18:31:50.163598",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hjlc",
+  "company",
+  "customer",
+  "customer_name",
+  "tax_id",
+  "address",
+  "address_details",
+  "column_break_xnoj",
+  "transaction_date",
+  "valid_till",
+  "contract_end_date",
+  "type",
+  "clearance_number",
+  "customer_contract",
+  "accounting_dimension_section",
+  "project",
+  "column_break_kmqe",
+  "cost_center",
+  "section_break_vzmy",
+  "items",
+  "sub_total",
+  "main_item_summary_section",
+  "main_item_summary",
+  "deductions_section",
+  "deductions",
+  "total_deduction",
+  "additions_section",
+  "additions",
+  "total_addition",
+  "section_break_nedu",
+  "advance_payment_percentage",
+  "first_retention_percentage",
+  "final_retention_percentage",
+  "value_added_tax_percentage",
+  "tax_deduction_and_addition_percentage",
+  "column_break_tdsz",
+  "advance_payment_amount",
+  "first_retention_amount",
+  "final_retention_amount",
+  "value_added_tax_amount",
+  "tax_deduction_and_addition_amount",
+  "section_break_adlg",
+  "stamps",
+  "section_break_kcrj",
+  "grand_total",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hjlc",
+   "fieldtype": "Section Break",
+   "label": "Main Section"
+  },
+  {
+   "fetch_from": "customer_contract.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_contract.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer ",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.tax_id",
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "Tax ID",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_contract.address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_contract.address_details",
+   "fieldname": "address_details",
+   "fieldtype": "Text",
+   "label": "Address Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xnoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction date"
+  },
+  {
+   "fetch_from": "customer_contract.valid_till",
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_contract.contract_end_date",
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nCurrent\nFinal"
+  },
+  {
+   "fieldname": "clearance_number",
+   "fieldtype": "Int",
+   "label": "Clearance Number"
+  },
+  {
+   "fieldname": "customer_contract",
+   "fieldtype": "Link",
+   "label": "Customer Contract",
+   "options": "Customer Contract",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimension "
+  },
+  {
+   "fetch_from": "customer_contract.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kmqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_contract.cost_center",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vzmy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "Internal Clearence Item"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_item_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Main Item Summary"
+  },
+  {
+   "fieldname": "main_item_summary",
+   "fieldtype": "Table",
+   "label": "Main Item Summary",
+   "options": "Internal Clearence Main Item Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deductions_section",
+   "fieldtype": "Section Break",
+   "label": "Deductions"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "Internal Clearence Deduction Table"
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Deduction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "additions_section",
+   "fieldtype": "Section Break",
+   "label": "Additions"
+  },
+  {
+   "fieldname": "additions",
+   "fieldtype": "Table",
+   "label": "Additions",
+   "options": "Internal Clearence Addition Table"
+  },
+  {
+   "fieldname": "total_addition",
+   "fieldtype": "Currency",
+   "label": "Total Addition",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nedu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "advance_payment_percentage",
+   "fieldtype": "Percent",
+   "label": "Advance Payment Percentage"
+  },
+  {
+   "fieldname": "first_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "First Retention Percentage"
+  },
+  {
+   "fieldname": "final_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "Final Retention Percentage"
+  },
+  {
+   "fieldname": "value_added_tax_percentage",
+   "fieldtype": "Percent",
+   "label": "Value Added Tax Percentage"
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_percentage",
+   "fieldtype": "Percent",
+   "label": "Tax Deduction and Addition Percentage"
+  },
+  {
+   "fieldname": "column_break_tdsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "advance_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Payment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_retention_amount",
+   "fieldtype": "Currency",
+   "label": "First Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_retention_amount",
+   "fieldtype": "Currency",
+   "label": "Final Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "value_added_tax_amount",
+   "fieldtype": "Currency",
+   "label": "Value Added Tax Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Deduction and Addition Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kcrj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_adlg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "stamps",
+   "fieldtype": "Table",
+   "label": "Stamps",
+   "options": "Stamps Table For Internal Customer Clearance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Internal Customer Clearance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-27 13:31:43.759454",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Internal Customer Clearance",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RS-.####",
+ "creation": "2024-04-23 01:32:29.704956",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "accounting_setup_section",
+  "accrual_revenue_account",
+  "revenue_account",
+  "value_added_tax_account",
+  "column_break_prnh",
+  "tax_deduction_and_addition_account",
+  "business_insurance_account",
+  "final_retention_account",
+  "advance_payment_account",
+  "percentage_setup_section",
+  "advance_payment__percentage",
+  "first_retention_percentage",
+  "column_break_gtpx",
+  "final_retention_percentage",
+  "value_added_tax_percentage",
+  "tax_deduction_and_addition__percentage",
+  "section_break_tngs",
+  "stamps"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "accounting_setup_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Setup"
+  },
+  {
+   "fieldname": "accrual_revenue_account",
+   "fieldtype": "Link",
+   "label": "Accrual Revenue Account ",
+   "options": "Account"
+  },
+  {
+   "fieldname": "revenue_account",
+   "fieldtype": "Link",
+   "label": "Revenue Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "value_added_tax_account",
+   "fieldtype": "Link",
+   "label": "Value Added Tax Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_prnh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_account",
+   "fieldtype": "Link",
+   "label": "Tax Deduction and Addition Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "business_insurance_account",
+   "fieldtype": "Link",
+   "label": "First Retention Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "advance_payment_account",
+   "fieldtype": "Link",
+   "label": "Advance Payment Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "percentage_setup_section",
+   "fieldtype": "Section Break",
+   "label": "Percentage Setup"
+  },
+  {
+   "fieldname": "column_break_gtpx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "advance_payment__percentage",
+   "fieldtype": "Percent",
+   "label": "Advance Payment  Percentage"
+  },
+  {
+   "fieldname": "first_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "First Retention Percentage"
+  },
+  {
+   "fieldname": "final_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "Final Retention Percentage"
+  },
+  {
+   "fieldname": "value_added_tax_percentage",
+   "fieldtype": "Percent",
+   "label": "Value Added Tax Percentage"
+  },
+  {
+   "fieldname": "tax_deduction_and_addition__percentage",
+   "fieldtype": "Percent",
+   "label": "Tax Deduction and Addition  Percentage"
+  },
+  {
+   "fieldname": "final_retention_account",
+   "fieldtype": "Link",
+   "label": "Final Retention Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_tngs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "stamps",
+   "fieldtype": "Table",
+   "label": "Stamps",
+   "options": "Stamps Table For Revenue Setup"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-27 11:22:08.572547",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Revenue Setup",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

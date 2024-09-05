@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-23 02:09:12.691052",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_main",
+  "number",
+  "business_item",
+  "business_item_name",
+  "description",
+  "uom",
+  "quantity",
+  "rate",
+  "amount",
+  "boq",
+  "boq_id",
+  "margin",
+  "selling_rate",
+  "selling_amount",
+  "project_row_id",
+  "column_break_saye",
+  "direct_cost",
+  "indirect_cost",
+  "markup_cost"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_main",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Main ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "business_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Item",
+   "options": "Business Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_item.uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unit Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_main==0",
+   "fieldname": "boq",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "BOQ"
+  },
+  {
+   "depends_on": "eval:doc.is_main==0",
+   "fieldname": "margin",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Margin"
+  },
+  {
+   "fieldname": "selling_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Selling Amount",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_main==0",
+   "fieldname": "project_row_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Project Row ID",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_main==0",
+   "fieldname": "boq_id",
+   "fieldtype": "Link",
+   "label": "BOQ ID",
+   "options": "BOQ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_item.business_item_name",
+   "fieldname": "business_item_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Business Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "selling_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Selling Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_saye",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "direct_cost",
+   "fieldtype": "Currency",
+   "label": "Direct Cost"
+  },
+  {
+   "fieldname": "indirect_cost",
+   "fieldtype": "Currency",
+   "label": "InDirect Cost"
+  },
+  {
+   "fieldname": "markup_cost",
+   "fieldtype": "Currency",
+   "label": "Markup Cost"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-31 22:37:41.623612",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Costing Voucher Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

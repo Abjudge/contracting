@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SR-.#####",
+ "creation": "2024-04-29 09:39:18.428055",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_co7o",
+  "date",
+  "amended_from",
+  "required_date",
+  "column_break_mrvw",
+  "requester",
+  "project",
+  "cost_center",
+  "section_break_fltu",
+  "subcontractor_request_items",
+  "section_break_niha",
+  "terms_and_condition",
+  "terms_and_condition_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_co7o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subcontractor Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "required_date",
+   "fieldtype": "Date",
+   "label": "Required Date"
+  },
+  {
+   "fieldname": "column_break_mrvw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requester",
+   "fieldtype": "Link",
+   "label": "Requester",
+   "options": "User"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fetch_from": "project.cost_center",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "section_break_fltu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "subcontractor_request_items",
+   "fieldtype": "Table",
+   "label": "Subcontractor Request Items",
+   "options": "Subcontractor Request Items"
+  },
+  {
+   "fieldname": "section_break_niha",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "terms_and_condition",
+   "fieldtype": "Link",
+   "label": "Terms and Condition",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "terms_and_condition.terms",
+   "fieldname": "terms_and_condition_details",
+   "fieldtype": "Text",
+   "label": "Terms and Condition Details",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Create",
+   "link_doctype": "Subcontractor Contract",
+   "link_fieldname": "subcontractor_request"
+  }
+ ],
+ "modified": "2024-05-08 13:23:11.856475",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Subcontractor Request",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

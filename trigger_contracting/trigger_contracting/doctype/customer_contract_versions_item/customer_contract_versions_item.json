@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-07 15:39:41.659459",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_main",
+  "number",
+  "contract_quantity",
+  "project",
+  "uom",
+  "rate",
+  "amount",
+  "selling_price",
+  "poc",
+  "allowance_percentage",
+  "column_break_jwaw",
+  "business_item",
+  "business_item_name",
+  "description",
+  "cost_center",
+  "completed_quantity",
+  "remaining__quantity",
+  "completed_amount",
+  "max_allowed_qty",
+  "max_allowed_amount"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_main",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Main "
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contract_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Contract Quantity"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fetch_from": "business_item.uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "selling_price",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Selling Price",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "poc",
+   "fieldtype": "Percent",
+   "label": "POC",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "allowance_percentage",
+   "fieldtype": "Percent",
+   "label": "Allowance Percentage"
+  },
+  {
+   "fieldname": "column_break_jwaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Item",
+   "options": "Business Item"
+  },
+  {
+   "fetch_from": "business_item.business_item_name",
+   "fieldname": "business_item_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Business Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "completed_quantity",
+   "fieldtype": "Float",
+   "label": "Completed Quantity",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "remaining__quantity",
+   "fieldtype": "Float",
+   "label": "Remaining  Quantity ",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "completed_amount",
+   "fieldtype": "Currency",
+   "label": "Completed Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "max_allowed_qty",
+   "fieldtype": "Float",
+   "label": "Max Allowed Qty",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "max_allowed_amount",
+   "fieldtype": "Currency",
+   "label": "Max Allowed Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-07 15:39:41.659459",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Customer Contract Versions Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

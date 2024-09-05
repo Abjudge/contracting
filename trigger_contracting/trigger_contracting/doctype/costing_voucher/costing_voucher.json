@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CV-.####",
+ "creation": "2024-04-23 02:02:34.247842",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "date",
+  "customer",
+  "column_break_tham",
+  "tender_number",
+  "pricing_type",
+  "margin",
+  "section_break_huho",
+  "costing_voucher_items",
+  "total_direct_cost",
+  "total",
+  "costing_voucher_indirect_cost",
+  "total_indirect_cost",
+  "costing_voucher_markup_cost",
+  "total_markup_cost",
+  "costing_voucher_main_business_items",
+  "amended_from",
+  "total_cost_before_tax",
+  "tax_percentage",
+  "tax_amount",
+  "total_cost_with_tax"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer ",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.custom_tender_number",
+   "fieldname": "tender_number",
+   "fieldtype": "Data",
+   "label": "Tender Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pricing_type",
+   "fieldtype": "Link",
+   "label": "Pricing Type",
+   "options": "Pricing Type"
+  },
+  {
+   "fieldname": "margin",
+   "fieldtype": "Percent",
+   "label": "Margin "
+  },
+  {
+   "fieldname": "column_break_tham",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_huho",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "costing_voucher_items",
+   "fieldtype": "Table",
+   "label": "Costing Voucher Items",
+   "options": "Costing Voucher Items"
+  },
+  {
+   "fieldname": "costing_voucher_main_business_items",
+   "fieldtype": "Table",
+   "label": "Costing Voucher Main Business Items",
+   "options": "Costing Voucher Main Business Items"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Costing Voucher",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "total_direct_cost",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Direct"
+  },
+  {
+   "fieldname": "costing_voucher_indirect_cost",
+   "fieldtype": "Table",
+   "label": "Costing Voucher Indirect",
+   "options": "Costing Voucher Indirect Cost"
+  },
+  {
+   "fieldname": "total_indirect_cost",
+   "fieldtype": "Currency",
+   "label": "Total InDirect"
+  },
+  {
+   "fieldname": "costing_voucher_markup_cost",
+   "fieldtype": "Table",
+   "label": "Costing Voucher Markup",
+   "options": "Costing Voucher Markup Cost"
+  },
+  {
+   "fieldname": "total_cost_before_tax",
+   "fieldtype": "Currency",
+   "label": "Total Before Tax"
+  },
+  {
+   "fieldname": "tax_percentage",
+   "fieldtype": "Percent",
+   "label": "Tax Percentage"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost_with_tax",
+   "fieldtype": "Currency",
+   "label": "Total With Tax",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_markup_cost",
+   "fieldtype": "Currency",
+   "label": "Total Markup"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Create",
+   "link_doctype": "BOQ",
+   "link_fieldname": "costing_voucher"
+  },
+  {
+   "group": "Create",
+   "link_doctype": "Project Required Material",
+   "link_fieldname": "costing_voucher"
+  }
+ ],
+ "modified": "2024-06-10 13:20:17.355050",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Costing Voucher",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

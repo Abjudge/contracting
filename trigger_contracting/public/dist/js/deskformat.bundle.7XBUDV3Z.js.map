@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../apps/trigger_contracting/trigger_contracting/public/js/form/formatters.js"],
+  "sourcesContent": ["frappe.form.link_formatters['Business Item'] = function(value, doc) {\n    consolejson.log('value', value);\n    if(doc.business_item_name && doc.business_item_name !== value) {\n        return value + ': ' + doc.business_item_name;\n    } else {\n        return value;\n    }\n}"],
+  "mappings": ";;AAAA,SAAO,KAAK,gBAAgB,mBAAmB,SAAS,OAAO,KAAK;AAChE,gBAAY,IAAI,SAAS,KAAK;AAC9B,QAAG,IAAI,sBAAsB,IAAI,uBAAuB,OAAO;AAC3D,aAAO,QAAQ,OAAO,IAAI;AAAA,IAC9B,OAAO;AACH,aAAO;AAAA,IACX;AAAA,EACJ;",
+  "names": []
+}

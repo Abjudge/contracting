@@ -1,0 +1,280 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CQ-.####",
+ "creation": "2024-04-24 00:42:01.697039",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hjlc",
+  "company",
+  "customer",
+  "customer_name",
+  "tax_id",
+  "column_break_xnoj",
+  "transaction_date",
+  "valid_till",
+  "address",
+  "address_details",
+  "accounting_dimension_section",
+  "project",
+  "column_break_jmxt",
+  "cost_center",
+  "section_break_ifok",
+  "items",
+  "sub_total",
+  "percentages_section",
+  "advance_payment_percentage",
+  "first_retention_percentage",
+  "final_retention_percentage",
+  "value_added_tax_percentage",
+  "tax_deduction_and_addition_percentage",
+  "column_break_wpoq",
+  "advance_payment_amount",
+  "first_retention_amount",
+  "final_retention_amount",
+  "value_added_tax_amount",
+  "tax_deduction_and_addition_amount",
+  "grand_total_section",
+  "grand_total",
+  "amended_from",
+  "terms_and_condition_section",
+  "terms_and_condition",
+  "terms_and_condition_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hjlc",
+   "fieldtype": "Section Break",
+   "label": "Main Section"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer ",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "column_break_xnoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction date"
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "label": "Valid Till"
+  },
+  {
+   "fieldname": "accounting_dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimension "
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_primary_address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fetch_from": "customer.primary_address",
+   "fieldname": "address_details",
+   "fieldtype": "Text",
+   "label": "Address Details",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.tax_id",
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "Tax ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "percentages_section",
+   "fieldtype": "Section Break",
+   "label": "Percentages "
+  },
+  {
+   "fieldname": "column_break_wpoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total_section",
+   "fieldtype": "Section Break",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Quotation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Customer Quotation Item"
+  },
+  {
+   "fieldname": "column_break_jmxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ifok",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "first_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "First Retention Percentage"
+  },
+  {
+   "fieldname": "final_retention_percentage",
+   "fieldtype": "Percent",
+   "label": "Final Retention Percentage"
+  },
+  {
+   "fieldname": "value_added_tax_percentage",
+   "fieldtype": "Percent",
+   "label": "Value Added Tax Percentage"
+  },
+  {
+   "fieldname": "advance_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Advance Payment Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_retention_amount",
+   "fieldtype": "Currency",
+   "label": "First Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_retention_amount",
+   "fieldtype": "Currency",
+   "label": "Final Retention Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "value_added_tax_amount",
+   "fieldtype": "Currency",
+   "label": "Value Added Tax Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Deduction and Addition Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "advance_payment_percentage",
+   "fieldtype": "Percent",
+   "label": "Advance Payment Percentage"
+  },
+  {
+   "fieldname": "tax_deduction_and_addition_percentage",
+   "fieldtype": "Percent",
+   "label": "Tax Deduction and Addition Percentage"
+  },
+  {
+   "fieldname": "terms_and_condition_section",
+   "fieldtype": "Section Break",
+   "label": "Terms and Condition"
+  },
+  {
+   "fieldname": "terms_and_condition",
+   "fieldtype": "Link",
+   "label": "Terms And Condition",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "terms_and_condition.terms",
+   "fieldname": "terms_and_condition_details",
+   "fieldtype": "Text",
+   "label": "Terms And Condition Details"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total ",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Create",
+   "link_doctype": "Customer Contract",
+   "link_fieldname": "customer_quotation"
+  }
+ ],
+ "modified": "2024-05-05 03:11:37.303660",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Customer Quotation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

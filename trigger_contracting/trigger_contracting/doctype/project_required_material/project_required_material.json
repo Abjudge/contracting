@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PRM-.####",
+ "creation": "2024-04-27 14:08:12.515912",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_l3jg",
+  "transaction_date",
+  "project",
+  "column_break_edeg",
+  "costing_voucher",
+  "section_break_divs",
+  "items",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_l3jg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "costing_voucher",
+   "fieldtype": "Link",
+   "label": "Costing Voucher",
+   "options": "Costing Voucher",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_edeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_divs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Project Required Material Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Required Material",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Create",
+   "link_doctype": "Material Request",
+   "link_fieldname": "project_required_material"
+  }
+ ],
+ "modified": "2024-05-05 12:51:38.278209",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Project Required Material",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

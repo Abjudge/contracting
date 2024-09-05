@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 09:41:51.944171",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_business_item",
+  "number",
+  "business_item_name",
+  "column_break_iljh",
+  "unit",
+  "qty",
+  "section_break_cytp",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_business_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Business Item",
+   "options": "Business Item"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Number",
+   "options": "Business Item"
+  },
+  {
+   "fieldname": "column_break_iljh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "section_break_cytp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  },
+  {
+   "fetch_from": "customer_business_item.business_item_name",
+   "fieldname": "business_item_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Business Item Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-06 12:11:12.958152",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Subcontractor Request Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

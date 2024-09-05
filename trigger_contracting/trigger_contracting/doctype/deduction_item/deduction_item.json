@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:deduction_item_name",
+ "creation": "2024-04-23 00:22:27.410520",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qjxm",
+  "type",
+  "deduction_item_name",
+  "deduction_item_accounts"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qjxm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deduction_item_name",
+   "fieldtype": "Data",
+   "label": "Deduction Item Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "deduction_item_accounts",
+   "fieldtype": "Table",
+   "label": "Deduction Item Accounts",
+   "options": "Deduction Item Accounts"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Subcontractors\nCustomer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-01 15:20:57.152147",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "Deduction Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

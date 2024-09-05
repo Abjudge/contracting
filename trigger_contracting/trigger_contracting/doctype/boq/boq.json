@@ -1,0 +1,270 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BQ-.####",
+ "creation": "2024-04-23 02:26:26.287435",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_5rxq",
+  "costing_voucher",
+  "c_v_row_id",
+  "column_break_ajak",
+  "project_row_id",
+  "section_break_lljr",
+  "transaction_date",
+  "related_project",
+  "related_customer",
+  "business_item",
+  "main_b_i",
+  "column_break_fwrw",
+  "project__quantity",
+  "expected_start_date",
+  "expected_end_date",
+  "b_item_nme",
+  "mb_item_nme",
+  "required_material_section",
+  "boq_item",
+  "total_material_cost",
+  "section_break_jmtl",
+  "labor_table",
+  "labor_cost",
+  "section_break_hyff",
+  "required_equipment",
+  "equipment_cost",
+  "section_break_skth",
+  "subcontractors",
+  "total_subcontractors_cost",
+  "section_break_vtxb",
+  "other_expenses",
+  "total_expenses_cost",
+  "grand_total",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_5rxq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "costing_voucher",
+   "fieldtype": "Link",
+   "label": "Costing Voucher",
+   "options": "Costing Voucher",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_lljr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "related_project",
+   "fieldtype": "Link",
+   "label": "Related Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "related_customer",
+   "fieldtype": "Link",
+   "label": "Related Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project__quantity",
+   "fieldtype": "Float",
+   "label": "Project  Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "required_material_section",
+   "fieldtype": "Section Break",
+   "label": "Required Material"
+  },
+  {
+   "fieldname": "boq_item",
+   "fieldtype": "Table",
+   "label": "BOQ Item",
+   "options": "BOQ Item"
+  },
+  {
+   "fieldname": "total_material_cost",
+   "fieldtype": "Currency",
+   "label": "Total Material Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jmtl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "labor_table",
+   "fieldtype": "Table",
+   "label": "Labor Table",
+   "options": "BOQ Labor Table"
+  },
+  {
+   "fieldname": "labor_cost",
+   "fieldtype": "Currency",
+   "label": "Labor Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_hyff",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "required_equipment",
+   "fieldtype": "Table",
+   "label": "Required Equipment",
+   "options": "BOQ Required Equipment"
+  },
+  {
+   "fieldname": "equipment_cost",
+   "fieldtype": "Currency",
+   "label": "Equipment Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_skth",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "subcontractors",
+   "fieldtype": "Table",
+   "label": "Subcontractors",
+   "options": "BOQ Subcontractors"
+  },
+  {
+   "fieldname": "section_break_vtxb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "other_expenses",
+   "fieldtype": "Table",
+   "label": "Other Expenses",
+   "options": "BOQ Other Expenses"
+  },
+  {
+   "fieldname": "total_expenses_cost",
+   "fieldtype": "Currency",
+   "label": "Total Expenses Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fwrw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_subcontractors_cost",
+   "fieldtype": "Currency",
+   "label": "Total Subcontractors Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "c_v_row_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Costing Voucher Row Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ajak",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_row_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Project Row Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "BOQ",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "business_item",
+   "fieldtype": "Link",
+   "label": "Business Item ",
+   "options": "Business Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "main_b_i",
+   "fieldtype": "Link",
+   "label": "Main Business Item",
+   "options": "Business Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "business_item.business_item_name",
+   "fieldname": "b_item_nme",
+   "fieldtype": "Data",
+   "label": "Business Item Nme",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "main_b_i.business_item_name",
+   "fieldname": "mb_item_nme",
+   "fieldtype": "Data",
+   "label": "Main Business Item Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-06 15:15:54.269029",
+ "modified_by": "Administrator",
+ "module": "Trigger Contracting",
+ "name": "BOQ",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
